@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <hr>
+    <select name="marcacerveza" id="">
+        <option value="marca de cerveza">marca de cerveza</option>
+        <option value="DK">Dunkel</option>
+        <option value="Pilsen">Pilsen</option>
+        <option value="Norteña">Norteña</option>
+        <option value="Zillertal">Zillertal</option>
+        <option value="Brahma">Brahma</option>
+    </select>
+    <input type="text" id="boton2" placeholder="pon la cantidad" style="width:20px ;" value="1" required>
+    <input type="text" id="boton3" placeholder="pon el precio en pesos" style="width:135px ;" required>
+    <input type="text" id="boton4" placeholder="pon el volumen en ml" style="width:130px ;" required>
+    <br>
+    <button style="height: 25px; width: 50px ;" onclick="content()">Enviar</button>
+    <p>el precio $ por litro:</p> <p id="valor"></p>
+    <p>(por favor no poner unidades)</p>
+    
+    <script>
+    function content(){let cantidad=Number(document.getElementById("boton2").value);
+        let precio=Number(document.getElementById("boton3").value);
+        let volumen=Number(document.getElementById("boton4").value);
+        document.getElementById("valor").textContent=(precio/(volumen*cantidad))*1000;
+        if(document.getElementById("valor").textContent==Infinity){ document.getElementById("valor").textContent="ponga más datos";}} 
+
+    </script>
+    <hr>
+    <select name="marcacerveza" id="">
+        <option value="marca de cerveza">marca de cerveza</option>
+        <option value="DK">Dunkel</option>
+        <option value="Pilsen">Pilsen</option>
+        <option value="Norteña">Norteña</option>
+        <option value="Zillertal">Zillertal</option>
+        <option value="Brahma">Brahma</option>
+        </select>
+    <input type="text" id="boton6" placeholder="pon la cantidad" style="width:20px ;" value="1">
+    <input type="text" id="boton7" placeholder="pon el precio en pesos" style="width:135px ;">
+    <input type="text" id="boton8" placeholder="pon el volumen en ml" style="width:130px ;">
+    <br>
+    <button style="height: 25px; width: 50px ;" onclick="content2()">Enviar</button>
+    <p>el precio $ por litro:</p> 
+    <p id="valor2"></p>
+    
+    <script>
+    function content2(){let cantidad2=Number(document.getElementById("boton6").value);
+        let precio2=Number(document.getElementById("boton7").value);
+        let volumen2=Number(document.getElementById("boton8").value);
+     document.getElementById("valor2").textContent=(precio2/(volumen2*cantidad2))*1000;
+     if(document.getElementById("valor2").textContent==Infinity){ return document.getElementById("valor2").textContent="ponga más datos";}} 
+    </script>
+    <hr>
+           <select name="marcacerveza" id="">
+        <option value="marca de cerveza">marca de cerveza</option>
+        <option value="DK">Dunkel</option>
+        <option value="Pilsen">Pilsen</option>
+        <option value="Norteña">Norteña</option>
+        <option value="Zillertal">Zillertal</option>
+        <option value="Brahma">Brahma</option>
+        </select>
+    <input type="text" id="boton10" placeholder="pon la cantidad" style="width:20px ;" value="1">
+    <input type="text" id="boton11" placeholder="pon el precio en pesos" style="width:135px ;">
+    <input type="text" id="boton12" placeholder="pon el volumen en ml" style="width:130px ;">
+    <br>
+    <button style="height: 25px; width: 50px ;" onclick="content3()">Enviar</button>
+    <p>el precio $ por litro:</p> 
+    <p id="valor3"></p>
+    
+    <script>
+        let valorMasPequeño= 0
+    function content3(){let cantidad3=Number(document.getElementById("boton10").value);
+        let precio3=Number(document.getElementById("boton11").value);
+        let volumen3=Number(document.getElementById("boton12").value);
+         document.getElementById("valor3").textContent=(precio3/(volumen3*cantidad3))*1000
+        if(document.getElementById("valor3").textContent==Infinity){ return document.getElementById("valor3").textContent="ponga más datos";}};
+       function Valpeque(){
+          let todosLosValores= [Number(document.getElementById("valor").textContent),
+           Number(document.getElementById("valor2").textContent),
+             Number(document.getElementById("valor3").textContent)].filter(function(n){return n!==0});
+     for(valores of todosLosValores){let valorx= todosLosValores[0]
+        valorMasPequeño=valores>valorx? valorx: valores
+     }document.getElementById("preciobarato").textContent=valorMasPequeño;
+     console.log(valorMasPequeño); 
+     if(valorMasPequeño==0){return document.getElementById("preciobarato").textContent="inserte un precio"};
+     }
+     
+    </script>
+    <h3>El precio más barato es</h3>
+    <h4 id="preciobarato"></h4>
+    <button style="width: 140px; height:70px ;" onclick="Valpeque()">Ver el precio más barato</button>
+    <hr>
+</body>
+</html>
