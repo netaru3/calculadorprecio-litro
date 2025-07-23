@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora-de-Pre/li</title>
-    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/10310/10310245.png">
-        <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/10310/10310245.png">
+    <title>Document</title>
+    <link rel="stylesheet" href="precio.CSS">
 </head>
 <body>
     <hr>
-    <select name="marcacerveza" id="">
+    <select name="marcacerveza" id="" class="inputs">
         <option value="marca de cerveza">marca de cerveza</option>
         <option value="DK">Dunkel</option>
         <option value="Pilsen">Pilsen</option>
@@ -17,11 +16,11 @@
         <option value="Zillertal">Zillertal</option>
         <option value="Brahma">Brahma</option>
     </select>
-    <input type="number" id="boton2" placeholder="pon la cantidad" style="width:20px ;" value="1" required>
-    <input type="number" id="boton3" placeholder="pon el precio en pesos" style="width:135px ;" required>
-    <input type="number" id="boton4" placeholder="pon el volumen en ml" style="width:130px ;" required>
+    <input type="number" id="boton2" placeholder="pon la cantidad" style="width:20px ;" value="1" required class="inputs">
+    <input type="number" id="boton3" placeholder="pon el precio en pesos" style="width:150px ;" required class="inputs">
+    <input type="number" id="boton4" placeholder="pon el volumen en ml" style="width:140px ;" required class="inputs">
     <br>
-    <button style="height: 25px; width: 50px ;" onclick="content()">Enviar</button>
+    <button style="height: 25px; width: 50px ;" onclick="content()" class="botones">Enviar</button>
     <p>el precio $ por litro:</p> <p id="valor"></p>
     <p>(por favor no poner unidades)</p>
     
@@ -34,7 +33,7 @@
 
     </script>
     <hr>
-    <select name="marcacerveza" id="">
+    <select name="marcacerveza" id="" class="inputs">
         <option value="marca de cerveza">marca de cerveza</option>
         <option value="DK">Dunkel</option>
         <option value="Pilsen">Pilsen</option>
@@ -42,11 +41,11 @@
         <option value="Zillertal">Zillertal</option>
         <option value="Brahma">Brahma</option>
         </select>
-    <input type="number" id="boton6" placeholder="pon la cantidad" style="width:20px ;" value="1">
-    <input type="number" id="boton7" placeholder="pon el precio en pesos" style="width:135px ;">
-    <input type="number" id="boton8" placeholder="pon el volumen en ml" style="width:130px ;">
+    <input type="number" id="boton6" placeholder="pon la cantidad" style="width:20px ;" value="1" class="inputs">
+    <input type="number" id="boton7" placeholder="pon el precio en pesos" style="width:150px ;" class="inputs">
+    <input type="number" id="boton8" placeholder="pon el volumen en ml" style="width:140px ;" class="inputs">
     <br>
-    <button style="height: 25px; width: 50px ;" onclick="content2()">Enviar</button>
+    <button style="height: 25px; width: 50px ;" onclick="content2()" class="botones">Enviar</button>
     <p>el precio $ por litro:</p> 
     <p id="valor2"></p>
     
@@ -58,7 +57,7 @@
      if(document.getElementById("valor2").textContent==Infinity){ return document.getElementById("valor2").textContent="ponga más datos";}} 
     </script>
     <hr>
-           <select name="marcacerveza" id="">
+           <select name="marcacerveza" id="" class="inputs">
         <option value="marca de cerveza">marca de cerveza</option>
         <option value="DK">Dunkel</option>
         <option value="Pilsen">Pilsen</option>
@@ -66,11 +65,11 @@
         <option value="Zillertal">Zillertal</option>
         <option value="Brahma">Brahma</option>
         </select>
-    <input type="number" id="boton10" placeholder="pon la cantidad" style="width:20px ;" value="1">
-    <input type="number" id="boton11" placeholder="pon el precio en pesos" style="width:135px ;">
-    <input type="number" id="boton12" placeholder="pon el volumen en ml" style="width:130px ;">
+    <input type="number" id="boton10" placeholder="pon la cantidad" style="width:20px ;" value="1" class="inputs">
+    <input type="number" id="boton11" placeholder="pon el precio en pesos" style="width:150px ;" class="inputs">
+    <input type="number" id="boton12" placeholder="pon el volumen en ml" style="width:140px ;" class="inputs">
     <br>
-    <button style="height: 25px; width: 50px ;" onclick="content3()">Enviar</button>
+    <button style="height: 25px; width: 50px ;" onclick="content3()" class="botones">Enviar</button>
     <p>el precio $ por litro:</p> 
     <p id="valor3"></p>
     
@@ -93,9 +92,7 @@
      }
      
     </script>
-    <h3>El precio más barato es</h3>
-    <h4 id="preciobarato"></h4>
-    <button style="width: 140px; height:70px ;" onclick="Valpeque()">Ver el precio más barato</button>
+    <h3 id="preciobarato0">El precio más barato es</h3> <br>
+    <h4 id="preciobarato"></h4> <br>
+    <button style="width: 140px; height:70px ;" onclick="Valpeque()" id="button">Ver el precio más barato</button>
     <hr>
-</body>
-</html>
